@@ -1,0 +1,11 @@
+﻿
+<h1>Все новости города</h1>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (WebSite.Data.Model.New news in Model.allNews)
+        {
+            @Html.Partial("AllNews", news)
+        }
+    }
+</div>

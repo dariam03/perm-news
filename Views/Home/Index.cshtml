@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+
+<h1>Актуальные новости</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (WebSite.Data.Model.New news in Model.actNews)
+        {
+            @Html.Partial("AllNews", news)
+        }
+    }
+</div>

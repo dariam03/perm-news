@@ -1,0 +1,11 @@
+﻿@model WebSiteNewsViewModel
+<div class="container">
+    @foreach (var el in Model.webSiteNews.listWebSiteItems) //перебираем элементы
+    {
+        <div class="alert alert-warning mt-3">
+            <b>Информация:</b> @el.news.name<b />
+        </div>
+    }
+    <hr />
+    <div class="btn btn-danger" asp-controller="Order">Прочитать</div>
+</div>
